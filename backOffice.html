@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<script src="javascript/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="javascript/fancyBox/jquery.fancybox.pack.js"></script>
+		<link rel="stylesheet" href="javascript/fancyBox/jquery.fancybox.css" type="text/css" media="screen" />
+		<script src="javascript/backOfficeFunctions.js"></script>
+	</head>
+	<body id="main_page">
+		<div id="main_div">
+			<div id="header">
+				<div id="logopad">
+					<img id="mbta_intranet_logo" src="images/mbta-logo-white.png" alt="mbta intranet logo" style="height:50px; width:50px">
+				</div>
+				<div id="headertext">
+					<h1>Reduced Fare Media Request Form</h1>
+				</div>
+			</div>
+			<div id="content_div">
+				<br />
+				<table width="90%" id="customers">
+					<tr>
+						<th colspan="6" style="text-align: center"><b>Customer Information</b></th>
+					</tr>
+					<tr>
+						<td><b>Card Type:</b></td>
+						<td id="cardType"></td>
+						<td><b>Request Type:</b></td>
+						<td id="requestType"></td>
+						<td><b>Request Date:</b></td>
+						<td id="requestDate"></td>
+					</tr>
+					<tr class="alt">
+						<td><b>First Name:</b></td>
+						<td id="firstName"></td>
+						<td><b>Middle Initial:</b></td>
+						<td id="middleInitial"></td>
+						<td><b>Last Name:</b></td>
+						<td id="lastName"></td>
+					</tr>
+					<tr>
+						<td><b>Birth Date:</b></td>
+						<td id="birthDate"></td>
+						<td><b>Address 1:</b></td>
+						<td id="addressOne"></td>
+						<td><b>Address 2:</b></td>
+						<td id="addressTwo"></td>
+					</tr>
+					<tr class="alt">
+						<td><b>City:</b></td>
+						<td id="city"></td>
+						<td><b>State:</b></td>
+						<td id="state"></td>
+						<td><b>Zip:</b></td>
+						<td id="zip"></td>
+					</tr>
+					<tr>
+						<td><b>Country:</b></td>
+						<td id="country"></td>
+						<td><b>Phone Number:</b></td>
+						<td id="phoneNumber"></td>
+						<td><b>Email:</b></td>
+						<td id="email"></td>
+					</tr>
+					<tr class="alt">
+						<td><b>Monthly Pass?:</b></td>
+						<td id="transferVal"></td>
+						<td><b>In Store Pick-up:</b></td>
+						<td id="storePickUp"></td>
+						<td><b>Expiration Date:</b></td>
+						<td id="expirationDate"></td>
+					</tr>
+					<tr>
+						<td><b>Additional Info:</b></td>
+						<td id="additionalInfo" colspan="5"></td>
+					</tr>
+				</table>
+
+				<table width="90%">		
+					<tr>
+						<td>
+							<br />
+							<b>Customer Photo</b>
+							<br />
+							<img id="photoPath" src="" height="235px" width="300px">
+							<br />
+							<br />
+						</td>
+						<td>
+							<table width="100%">			  
+								<tr>
+									<td colspan="2">Fields marked with&#160;<img title="Trans Red Star" style="width: 9px; height: 9px;" alt="Required field" src="images/redstar%20trans.gif" border="0" /> are required</td>
+								</tr>
+								<tr>
+									<td><img title="Required field" alt="Required field" src="images/redstar%20trans.gif" border="0" />Processed By:</td>
+									<td><input name="processedBy" title="Enter name or initials" id="processedBy" type="text" maxlength="2000" alt="Enter name" />&#160;</td>
+								</tr>
+								<tr>
+									<td><img title="Required field" alt="Required field" src="images/redstar%20trans.gif" border="0" />Card Serial #:</td>
+									<td>5-<input name="cardSerial" title="Enter Card Serial Number" id="cardSerial" type="text" maxlength="2000" alt="Enter Card Serial" />&#160;</td>
+								</tr>
+								<tr>
+									<td><img title="Required field" alt="Required field" src="images/redstar%20trans.gif" border="0" />Card Expiration (MM/YY):</td>
+									<td>
+										<input name="expiration1" title="Enter Expiration Month" id="expiration1" type="text" maxlength="2" style="width: 2em;"/> /
+										<input name="expiration2" title="Enter Expiration Year" id="expiration2" type="text" maxlength="2" style="width: 2em;"/> 
+									</td>
+								</tr>
+								<tr>
+									<td><img title="Required field" alt="Required field" src="images/redstar%20trans.gif" border="0" />Update Mailing Address:</td>
+								<td>
+									<select name="changeAddress" title="Address Updated?" id="changeAddress" size="1">
+										<option selected="selected" value="No">No</option>
+										<option value="Yes">Yes</option>
+									</select>
+								</td>
+								</tr>
+								<tr>
+									<td><span style="Display:inline-block;width:9px;height:9px;"></span>Monthly Pass?:</td>
+									<td>
+										<select name="transferPass" title="Monthly Pass?" id="transferPass" size="1">
+											<option selected="selected" value="Yes">Yes</option>
+											<option value="No">No</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td><span style="Display:inline-block;width:9px;height:9px;"></span>Transfer Value:</td>
+									<td>
+										$ <input name="dollars" title="Enter Dollars" id="dollars" type="text" maxlength="3" style="width: 3em;"/> <b>.</b>
+										<input name="cents" title="Enter Cents" id="cents" type="text" maxlength="2" style="width: 2em;"/>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<input id="printerButton" type="button" value="Print Packing Slip" style="margin-top: 10px;	" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--<p align="center">&#160;</p>-->
+				<p style="vertical-align: text-top;">
+					Additional Information: <textarea name="additionalInfoBack" title="Enter any additional information to assist in processing the request." class="design_textfield" id="additionalInfoBack" style="width: 550px; height: 60px;" rows="2" cols="73"></textarea>
+				</p>
+				<br />
+				<div>
+					<span id="buttonLine" style="width:10%"></span>
+					<span id="buttonLine" style="width:28%">
+						<input id="completeTransaction" type="button" value="Complete Transaction" />
+						<input id="newTransaction" type="button" value="New Transaction" />
+					</span>
+					
+					<span id="buttonLine">
+						<a id="inlineBackOffice" href="#fancyBoxDiv"><input id="cantProduceCard" type="button" value="Mark as Exception" /></a>
+						<input id="newTransactionException" type="button" value="New Transaction" />
+					</span>
+					<span id="buttonLine" style="width:15%">
+						<input id="closeShift" type="button" value="Close Shift" />
+					</span>
+				</div>
+				<p align="center">&#160;</p>
+				<input name="P_Id" title="Enter Photo Path" id="P_Id" type="hidden" />
+				<input name="lock" title="Enter Photo Path" id="lock" type="hidden" />
+				<input name="unlockTheRecord" title="Enter Photo Path" id="unlockTheRecord" type="hidden" />
+				<iframe id="loaderFrame" ></iframe>
+			</div>
+		</div>
+		<div style="Display:none">
+			<div id="fancyBoxDiv">
+				<br />
+				Please enter a reason: <br />
+				<textarea name="exceptionInformation" title="Enter a brief description of the issue" id="exceptionInformation" style="width: 550px; height: 78px;" rows="4" cols="73"></textarea>
+				<br />
+				<br />
+				<div style="text-align:center">
+					<input type="button" id="cantProduceCardAction" value="Okay" style="padding-left: 25px; padding-right: 25px; margin-right: 20px;" />
+					<input type="button" id="cantProduceCardCancel" value="Cancel" onClick="$.fancybox.close();" style="padding-left: 25px; padding-right: 25px; margin-left: 20px;" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

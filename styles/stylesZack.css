@@ -1,0 +1,59 @@
+table, th, td {
+	border: 1px solid blue;
+}
+#main_page{
+	background-color:#556ca2;
+	margin: 0 6px;
+}
+#main_div {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+#header {
+  height: 60px;
+  margin: 0 0 5px 0;
+  font-size: 11px;
+  background: url(images/stitched_bk.jpg) repeat-x 0px 0px;
+  background-color: #a1b4dc;
+  color: #33415c;
+  border-bottom: 5px solid #92278a;
+}
+#content_div{
+	background-color:white;
+	padding: 10px 10px 10px 10px;
+}
+#searchbar_div{
+	background-color:white;
+	padding: 15px 100px 0px 100px;
+  border-bottom: 10px solid #92278a;
+  width: 90%;
+}
+#spacer {
+	height: 6px;
+}
+#logopad {
+  padding: 4px 18px 0px 18px;
+  float: left;
+}
+
+#header {
+  height: 60px;
+  margin: 0 0 5px 0;
+  font-size: 11px;
+  background: url(images/stitched_bk.jpg) repeat-x 0px 0px;
+  background-color: #a1b4dc;
+  color: #33415c;
+  border-bottom: 5px solid #92278a;
+  text-align: center;
+}
+#logopad {
+  padding: 4px 18px 0px 18px;
+  float: left;
+}
+#headertext {
+	display:inline-block;
+	margin-right:56px;
+	color: white;
+}

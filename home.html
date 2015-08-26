@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<script src="javascript/jquery-1.11.3.min.js"></script>
+		<script src="javascript/navigationFunctions.js"></script>
+        <script type="text/javascript" src="javascript/fancyBox/jquery.fancybox.pack.js"></script>
+		<link rel="stylesheet" href="javascript/fancyBox/jquery.fancybox.css" type="text/css" media="screen" />
+		<script>
+			$(document).ready(function(){
+				$("a#inline").fancybox({
+					'hideOnContentClick': true
+				});
+			});
+			/*$('.launchFancyBox').click(function(){
+				
+			});
+			function testingFunc(){
+				$.fancybox([
+					'hideOnContentClick': true
+					{href : '#fancyBoxDiv' }
+				]);
+			}*/
+		</script>
+	</head>
+	<body id="main_page">
+		<div id="main_div">
+			<div id="header" onClick="home()">
+				<div id="logopad">
+					<img id="mbta_intranet_logo" src="images/mbta-logo-white.png" alt="mbta intranet logo" style="height:50px; width:50px">
+				</div>
+				<div id="headertext">
+					<h1>Reduced Fare Media Request</h1>
+				</div>
+			</div>
+			<div id="content_div">
+				<br />
+				<div id="homeTitle">Function Menu</div>
+				<br />
+				<table width="100%">
+					<tr>
+						<td style="text-align:center">
+							<input type="button" id="homeButtons" onClick="front()" value="Customer Input Form" />
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center">
+							<input type="button" id="homeButtons" onClick="phoneRequest()" value="Customer Phone Input Form (Under Construction)" disabled />
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center">
+							<a id="inline" href="#fancyBoxDiv"><input type="button" id="homeButtons" value="Customer Card Production Form" /></a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center">
+							<input type="button" id="homeButtons" onClick="exceptions()" value="Exceptions Queue Page" />
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center">
+							<input type="button" id="homeButtons" onClick="workInProgress()" value="Work In Progress Page" />
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center">
+							<input type="button" id="homeButtons" onClick="editTable()" value="Search and Edit Page" />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div style="Display:none">
+			<div id="fancyBoxDiv">
+				<br />
+				This will start a customer card production process. Do you wish to continue? <br />
+				<br />
+				<div style="text-align:center">
+					<input type="button" id="fancyBoxButton" value="Yes" onClick="backOffice()" style="padding-left: 20px; padding-right: 20px; margin-right: 20px;" />
+					<input type="button" id="fancyBoxButton" value="No" onClick="$.fancybox.close();" style="padding-left: 20px; padding-right: 20px; margin-left: 20px;" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,102 @@
+#main_page{
+    background-color:#556ca2;
+	margin: 0 6px;
+}
+#main_div {
+	width: 988px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+#header {
+  height: 60px;
+  margin: 0 0 5px 0;
+  font-size: 11px;
+  background: url(images/stitched_bk.jpg) repeat-x 0px 0px;
+  background-color: #a1b4dc;
+  color: #33415c;
+  border-bottom: 5px solid #92278a;
+  text-align: center;
+}
+#content_div{
+    background-color:white;
+	padding: 10px 100px 10px 100px;
+}
+#spacer {
+	height: 6px;
+}
+#logopad {
+  padding: 4px 18px 0px 18px;
+  float: left;
+}
+#headertext {
+	display:inline-block;
+	margin-right:56px;
+	color: white;
+}
+#customerinformation {
+	border: 1px solid black;
+}
+#buttonLine {
+	display:inline-block;
+	text-align:center;
+	width: 18%;
+}
+#customers {
+    width: 100%;
+    border-collapse: collapse;
+	border: 1px solid #99B0DA;
+}
+#customers td, #customers th {
+    font-size: 1em;
+	border-bottom: 1px solid #99B0DA;
+    padding: 3px 7px 2px 7px;
+}
+#customers th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #99B0DA;
+    color: #ffffff;
+}
+#customers tr.alt td {
+    color: #000000;
+    background-color: #CBD9F3;
+}
+#loaderFrame{
+        visibility: hidden;
+        height: 1px;
+        width: 1px;
+     }
+.camcontent{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+  width: 480px;
+  margin: auto;
+  }
+.cambuttons button {
+  border-radius: 15px;
+  font-size: 18px;
+  }
+.cambuttons button:hover {
+  cursor: pointer;
+  border-radius: 15px;
+  background: #00dd00 ;    /* green */ 
+  }
+#homeButtons{
+	 width: 80%;
+	 padding: 15px 0px;
+	 margin-bottom: 20px;
+	 font-size: large;
+}
+#homeTitle{
+	font-size: xx-large;
+	text-align:center
+}
+td.rt{
+	font-size: x-small;
+	color: rgb(255,0,0);
+}

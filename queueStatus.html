@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<script src="javascript/jquery-1.11.3.min.js"></script>
+		<script src="javascript/navigationFunctions.js"></script>
+        <script type="text/javascript" src="javascript/fancyBox/jquery.fancybox.pack.js"></script>
+		<link rel="stylesheet" href="javascript/fancyBox/jquery.fancybox.css" type="text/css" media="screen" />
+		<script>
+			$(function(){
+				$("#header").load("theHeader.html");
+			});
+			$(document).ready(function(){
+				$.post("queries/queueStatusQuery.php", function(data) {
+					var response = $.parseJSON(data);
+					$('#toDo').val(response.toDoCount);
+					$('#completed').val(response.completedCount);
+					$('#total').val(response.totalCount);
+					$('#oldest').val(response.oldestRecord);
+				});
+				var dateVar = new Date();
+				//document.getElementById("theDateSpan").textContent = (dateVar.getMonth()+1)+"/"+dateVar.getDate()+"/"+dateVar.getFullYear()+" "+dateVar.getHours()+":"+dateVar.getMinutes()+":"+dateVar.getSeconds();
+				document.getElementById("theDateSpan").textContent = dateVar.toLocaleDateString() + " " + dateVar.toLocaleTimeString();
+			});
+			function refreshPage(){
+				window.location.reload(true);
+				/*$.post("queries/queueStatusQuery.php", function(data) {
+					var response = $.parseJSON(data);
+					$('#toDo').val(response.toDoCount);
+					$('#completed').val(response.completedCount);
+					$('#total').val(response.totalCount);
+					$('#oldest').val(response.oldestRecord);
+				});*/
+			}
+		</script>
+	</head>
+	<body id="main_page">
+		<div id="main_div">
+			<div id="header"></div>
+			<div id="content_div">
+				This data was requested on <span id="theDateSpan"></span>
+				<br />
+				<br />
+				Total Records To Do: <input name="toDo" id="toDo" type="text" />
+				<br />
+				<br />
+				Total Records Completed: <input name="completed" id="completed" type="text" />
+				<br />
+				<br />
+				Total Records in database: <input name="total" id="total" type="text" />
+				<br />
+				<br />
+				Oldest Record that has not been started: <input name="oldest" id="oldest" type="text" />
+				<br />
+				<br />
+				<input name="refresh" id="refresh" type="button" onClick="refreshPage()" value="Refresh Page"/>
+			</div>
+		</div>
+	</body>
+</html>
